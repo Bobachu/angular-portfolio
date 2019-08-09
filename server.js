@@ -20,10 +20,10 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-app.use(express.static(__dirname + '/src'));
+app.use(express.static(__dirname + '/angularapp'));
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, '/src/index.html'))
+  res.sendFile(path.join(__dirname, '/angularapp/index.html'))
 })
 
 app.use(bodyParser.json());
