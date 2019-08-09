@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express');
 const nodemailer = require('nodemailer');
 const app = express();
@@ -18,6 +19,12 @@ const transporter = nodemailer.createTransport({
     rejectUnauthorized: false
   }
 });
+
+app.use(express.static(__dirname + '/angular-build'));
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'angular-build', 'index.html'))
+})
 
 app.use(bodyParser.json());
 
