@@ -5,6 +5,7 @@
     "types": []
   },
   "include": [
+    "src",
     "src/**/*.ts"
   ],
   "exclude": [
