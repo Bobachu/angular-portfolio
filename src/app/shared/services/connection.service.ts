@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ConnectionService {
-  url: string = 'http://localhost:3000/send';
+  url: string = 'https://fast-chamber-28946.herokuapp.com/send';
   constructor(private http: HttpClient) { }
 
   sendMessage(messageContent: any) {
