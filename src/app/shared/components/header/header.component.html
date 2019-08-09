@@ -1,0 +1,48 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light shadow-lg">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a
+        class="nav-item nav-link"
+        [routerLink]="['/']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ><i class="fas fa-home"></i> Home</a
+      >
+      <a
+        class="nav-item nav-link"
+        [routerLink]="['/resume']"
+        routerLinkActive="active"
+        ><i class="fas fa-user"></i> Resume</a
+      >
+      <a
+        class="nav-item nav-link"
+        [routerLink]="['/portfolio']"
+        routerLinkActive="active"
+        ><i class="fa fa-th"></i> Portfolio</a
+      >
+      <a
+        class="nav-item nav-link"
+        [routerLink]="['/contact']"
+        routerLinkActive="active"
+        ><i class="fa fa-envelope"></i> Contact</a
+      >
+      <!-- <a
+        class="nav-item nav-link"
+        [routerLink]="['/guestbook']"
+        routerLinkActive="active"
+        ><i class="fas fa-book"></i> Guestbook</a
+      > -->
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,122 @@
+<div class="container mt-5 contactPage">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-body" id="contactimg">
+          <img
+            src="../../../../assets/payphone.jpg"
+            alt="contact"
+            class="card-img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-body text-center">
+          <h2>
+            <i class="fa fa-address-card fa-fw"></i>
+            Contact Me
+          </h2>
+          <div>
+            <!-- make button that opens email form -->
+            <h2>Email: bob.church@gmail.com</h2>
+            <h2>Phone: (928) 651-1487</h2>
+            <h2>
+              <a
+                href="../../../../assets/Robert Church Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-file-pdf"></i> Resume</a
+              >
+            </h2>
+            <h2>
+              <a
+                href="https://www.linkedin.com/in/bob-church-42a0765/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </h2>
+            <h2>
+              <a
+                href="https://github.com/Bobachu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i> Github
+              </a>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow mt-2">
+        <div class="card-body">
+          <!-- email form goes here -->
+          <!-- Default form contact -->
+          <form
+            class="text-center border border-light p-5"
+            [formGroup]="contactForm"
+            (ngSubmit)="onSubmit()"
+          >
+            <h2 class="mb-4"><i class="fas fa-envelope"></i> Email Me</h2>
+            <p>Or you can Just email directly from here!</p>
+
+            <!-- Name -->
+            <input
+              type="text"
+              formControlName="contactFormName"
+              id="defaultContactFormName"
+              mdbInput
+              class="form-control mb-4"
+              placeholder="Name"
+            />
+
+            <!-- Email -->
+            <label>Sending to:</label>
+            <input
+              type="email"
+              formControlName="contactFormEmail"
+              id="defaultContactFormEmail"
+              class="form-control mb-4"
+              readonly
+              placeholder="bob.church@gmail.com"
+            />
+
+            <!-- Subject -->
+            <label>Subject</label>
+            <select
+              formControlName="contactFormSubjects"
+              class="browser-default custom-select mb-4"
+            >
+              <option value="" disabled>Choose option</option>
+              <option value="Feedback" selected>Feedback</option>
+              <option value="Bug Report">Report a bug</option>
+              <option value="Feature Request">Feature request</option>
+              <option value="Hi There">Just say hi</option>
+            </select>
+
+            <!-- Message -->
+            <div class="form-group">
+              <textarea
+                formControlName="contactFormMessage"
+                class="form-control rounded-0"
+                mdbInput
+                id="exampleFormControlTextarea2"
+                rows="3"
+                placeholder="Message"
+              ></textarea>
+            </div>
+
+            <!-- Send button -->
+            <button class="btn" type="submit" [disabled]="disabledSubmitButton">
+              Send
+            </button>
+          </form>
+          <!-- Default form contact -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
